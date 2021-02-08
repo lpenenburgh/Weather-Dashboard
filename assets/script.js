@@ -144,9 +144,15 @@ function cityLookup(event) {
                 $("#icon-Six").attr('src', "http://openweathermap.org/img/wn/" + (dateSixIcon) + "@2x.png" );
 
 
+                
 
-
-
+                  if (presentUv >= 8){
+                    $("#present-Index").css('background-color', 'red');
+                  }else if (presentUv<8 && presentUv>5){
+                    $("#present-Index").css('background-color', 'yellow');
+                  } else {
+                    $("#present-Index").css('background-color', 'green');
+                  };
 
 
 
