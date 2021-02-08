@@ -37,15 +37,27 @@ function cityLookup(event) {
         .then(function (data) {
             console.log(data)
 
-
+            
             //city name user entered apperears in current weather card 
             $("#present-City").text(city);
+
+            //current city icon
+            
+            var presentIcon = data.weather[0].icon;
+            console.log(presentIcon);
+            $("#present-Icon").attr('src', "http://openweathermap.org/img/wn/" + (presentIcon) + "@2x.png" );
+         
+            
+            
+            
+           
+
 
             //grabbing temp from the returned dara
             var presentTemp = data.main.temp;
             console.log(data.main.temp);
             //displaying temp in html     
-            $("#present-Temp").text(presentTemp);
+            $("#present-Temp").text(presentTemp + " °F");
 
             //Grabbing humidity values from data
             var presentHumidity = data.main.humidity;
