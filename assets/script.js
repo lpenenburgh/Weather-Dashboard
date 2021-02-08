@@ -28,7 +28,7 @@ function cityLookup(event) {
     };
 
 
-    var requestURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=c8223055e64b383b6a680afb8cf0f2e3'
+    var requestURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=imperial&appid=c8223055e64b383b6a680afb8cf0f2e3';
     console.log(requestURL);
     fetch(requestURL, requests)
         .then(function (response) {
@@ -46,11 +46,7 @@ function cityLookup(event) {
             var presentIcon = data.weather[0].icon;
             console.log(presentIcon);
             $("#present-Icon").attr('src', "http://openweathermap.org/img/wn/" + (presentIcon) + "@2x.png" );
-         
-            
-            
-            
-           
+
 
 
             //grabbing temp from the returned dara
@@ -95,32 +91,45 @@ function cityLookup(event) {
                 var dateTwoHumid = data.daily[0].humidity;
 
 
-                $("#temp-Two").text(dateTwoTemp);
+                $("#temp-Two").text(dateTwoTemp + " °F");
                 $("#humid-Two").text(dateTwoHumid);
+
+                var dateTwoIcon = data.daily[0].weather[0].icon;
+                $("#icon-Two").attr('src', "http://openweathermap.org/img/wn/" + (dateTwoIcon) + "@2x.png" );
 
                 //day 3 temp and humidity
                 var dateThreeTemp = data.daily[1].feels_like.day;
                 var dateThreeHumid = data.daily[1].humidity;
 
 
-                $("#temp-Three").text(dateThreeTemp);
+                $("#temp-Three").text(dateThreeTemp + " °F");
                 $("#humid-Three").text(dateThreeHumid);
+
+                var dateThreeIcon = data.daily[1].weather[0].icon;
+                $("#icon-Three").attr('src', "http://openweathermap.org/img/wn/" + (dateThreeIcon) + "@2x.png" );
 
                 //day 4 temp and humidity
                 var dateFourTemp = data.daily[2].feels_like.day;
                 var dateFourHumid = data.daily[2].humidity;
 
 
-                $("#temp-Four").text(dateFourTemp);
+                $("#temp-Four").text(dateFourTemp + " °F");
                 $("#humid-Four").text(dateFourHumid);
+
+                var dateFourIcon = data.daily[2].weather[0].icon;
+                $("#icon-Four").attr('src', "http://openweathermap.org/img/wn/" + (dateFourIcon) + "@2x.png" );
+                
 
                 //day 5 temp and humidity
                 var dateFiveTemp = data.daily[3].feels_like.day;
                 var dateFiveHumid = data.daily[3].humidity;
 
 
-                $("#temp-Five").text(dateFiveTemp);
+                $("#temp-Five").text(dateFiveTemp + " °F");
                 $("#humid-Five").text(dateFiveHumid);
+
+                var dateFiveIcon = data.daily[3].weather[0].icon;
+                $("#icon-Five").attr('src', "http://openweathermap.org/img/wn/" + (dateFiveIcon) + "@2x.png" );
 
                 //day 6 temp and humidity
                 var dateSixTemp = data.daily[4].feels_like.day;
@@ -128,10 +137,11 @@ function cityLookup(event) {
                 console.log(dateSixHumid);
 
 
-                $("#temp-Six").text(dateSixTemp);
+                $("#temp-Six").text(dateSixTemp + " °F");
                 $("#humid-Six").text(dateSixHumid);
 
-
+                var dateSixIcon = data.daily[4].weather[0].icon;
+                $("#icon-Six").attr('src', "http://openweathermap.org/img/wn/" + (dateSixIcon) + "@2x.png" );
 
 
 
