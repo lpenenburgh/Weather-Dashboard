@@ -14,6 +14,7 @@ My goal for this project was create a simple app the allows the user to look up 
 
 ### Credits
  <a href="https://momentjs.com">Moment.js</a>
+ <br>
  <a href="https://openweathermap.org">OpenWeather</a>
 
 ### Deployed Application
