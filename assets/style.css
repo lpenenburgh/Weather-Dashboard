@@ -4,28 +4,18 @@
     color: white;
     border-radius: 0;
     padding: 20px;
-  }
-
-.col-2 {
-  margin-left: 20px;
-}  
-
-#date-Two {
-  font-size: 20px;
 }
 
-#date-Three {
-  font-size: 20px;
+h3 {
+  font-size: 13px;
 }
 
-#date-Four {
-  font-size: 20px;
+.btn {
+  background-color: blue;
+  color: white;
 }
 
-#date-Five {
-  font-size: 20px;
-}
-
-#date-Six {
-  font-size: 20px;
+.small-cards {
+  background-color: blue;
+  color: white;
 }
